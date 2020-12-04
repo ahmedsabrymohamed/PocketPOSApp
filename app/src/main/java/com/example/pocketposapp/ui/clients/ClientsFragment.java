@@ -1,4 +1,4 @@
-package com.example.pocketposapp.ui.notifications;
+package com.example.pocketposapp.ui.clients;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pocketposapp.R;
 
-public class NotificationsFragment extends Fragment {
+public class ClientsFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private ClientsViewModel clientsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        clientsViewModel =
+                ViewModelProviders.of(this).get(ClientsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_clients, container, false);
+        final TextView textView = root.findViewById(R.id.text_clients);
+        clientsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
