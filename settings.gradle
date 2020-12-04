@@ -1,0 +1,2 @@
+rootProject.name='PocketPOSAPP'
+include ':app'
