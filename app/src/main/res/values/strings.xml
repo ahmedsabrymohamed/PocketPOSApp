@@ -2,6 +2,9 @@
     <string name="app_name">PocketPOSAPP</string>
     <string name="title_clients">عملاء</string>
     <string name="title_dashboard">إحصائيات</string>
-    <string name="title_vendors">مواردين</string>
+    <string name="title_bills">فواتير</string>
     <string name="title_products">منتجات</string>
+    <string name="add_product">منتجات</string>
+    <string name="add_client">عملاء</string>
+    <string name="add_bill">فواتير</string>
 </resources>

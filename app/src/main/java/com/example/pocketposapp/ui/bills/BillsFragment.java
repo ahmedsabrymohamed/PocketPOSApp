@@ -1,4 +1,4 @@
-package com.example.pocketposapp.ui.vendors;
+package com.example.pocketposapp.ui.bills;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.pocketposapp.R;
 
-public class VendorsFragment extends Fragment {
+public class BillsFragment extends Fragment {
 
-    private VendorsViewModel vendorsViewModel;
+    private BillsViewModel billsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        vendorsViewModel =
-                ViewModelProviders.of(this).get(VendorsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_vendors, container, false);
-        final TextView textView = root.findViewById(R.id.text_vendors);
-        vendorsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        billsViewModel =
+                ViewModelProviders.of(this).get(BillsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_bills, container, false);
+        final TextView textView = root.findViewById(R.id.text_bills);
+        billsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText("Ahmed Sabry");

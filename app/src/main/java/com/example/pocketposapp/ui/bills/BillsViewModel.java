@@ -1,16 +1,16 @@
-package com.example.pocketposapp.ui.vendors;
+package com.example.pocketposapp.ui.bills;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class VendorsViewModel extends ViewModel {
+public class BillsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public VendorsViewModel() {
+    public BillsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Vendors fragment");
+        mText.setValue("This is Bills fragment");
     }
 
     public LiveData<String> getText() {

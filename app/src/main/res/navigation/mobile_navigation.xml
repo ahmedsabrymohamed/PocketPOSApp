@@ -20,8 +20,8 @@
     <fragment
         android:id="@+id/navigation_vendors"
         android:name="com.example.pocketposapp.ui.products.ProductsFragment"
-        android:label="@string/title_vendors"
-        tools:layout="@layout/fragment_vendors" />
+        android:label="@string/title_bills"
+        tools:layout="@layout/fragment_bills" />
 
     <fragment
         android:id="@+id/navigation_products"
