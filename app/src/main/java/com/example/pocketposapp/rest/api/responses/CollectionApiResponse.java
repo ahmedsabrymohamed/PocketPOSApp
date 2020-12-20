@@ -1,4 +1,4 @@
-package com.example.pocketposapp.apiresponses;
+package com.example.pocketposapp.rest.api.responses;
 
 import com.google.gson.annotations.SerializedName;
 

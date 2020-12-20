@@ -1,9 +1,8 @@
-package com.example.pocketposapp.restapiinterface;
+package com.example.pocketposapp.rest.api.endpoints;
 
-import com.example.pocketposapp.apiresponses.CollectionApiResponse;
+import com.example.pocketposapp.rest.api.responses.CollectionApiResponse;
 import com.example.pocketposapp.model.Bill;
 import com.example.pocketposapp.model.BillType;
-import com.example.pocketposapp.model.Product;
 
 
 import retrofit2.Call;

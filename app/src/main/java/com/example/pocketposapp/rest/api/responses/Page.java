@@ -1,4 +1,4 @@
-package com.example.pocketposapp.apiresponses;
+package com.example.pocketposapp.rest.api.responses;
 
 public class Page {
 
