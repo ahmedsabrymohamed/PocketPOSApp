@@ -27,10 +27,10 @@ public class ApiClient {
         }
         return retrofit.create(apiClass);
     }
-    public  static <U> void fetchData( Supplier<Call<U>> getCall,BiConsumer<Call<U>, Response<U>> doOnResponse,
+    public  static <U> void fetchData( Call<U> call,BiConsumer<Call<U>, Response<U>> doOnResponse,
                                         BiConsumer<Call<U>,Throwable> doOnFailure){
 
-        getCall.get().enqueue(new Callback<U>() {
+        call.enqueue(new Callback<U>() {
             @Override
             public void onResponse(@NonNull Call<U>call, @NonNull Response<U> response) {
                 doOnResponse.accept(call,response);
