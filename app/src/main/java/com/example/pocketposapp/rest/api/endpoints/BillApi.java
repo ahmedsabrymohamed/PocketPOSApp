@@ -15,7 +15,7 @@ import retrofit2.http.Query;
 
 public interface BillApi {
     @GET
-    Call<CollectionApiResponse<Bill>> getBillList(@Query("page") String pageNumber);
+    Call<CollectionApiResponse<Bill>> getBillList(@Query("page") Integer pageNumber);
 
     @GET("{id}")
     Call<Bill> getBillById(@Path("id") Long id);
@@ -27,15 +27,15 @@ public interface BillApi {
     Call<Bill> updateBill(@Body Bill bill);
 
     @GET("findIfExists")
-    Call<CollectionApiResponse<Bill>> getBillListIfExists(@Query("deleted") boolean deleted, @Query("page") String pageNumber);
+    Call<CollectionApiResponse<Bill>> getBillListIfExists(@Query("deleted") boolean deleted, @Query("page") Integer pageNumber);
 
     @GET("findBySecondPartyId")
-    Call<CollectionApiResponse<Bill>> getBillListBySecondPartyId(@Query("deleted") boolean deleted, @Query("SecondPartyId") Long SecondPartyId, @Query("page") String pageNumber);
+    Call<CollectionApiResponse<Bill>> getBillListBySecondPartyId(@Query("deleted") boolean deleted, @Query("SecondPartyId") Long SecondPartyId, @Query("page") Integer pageNumber);
 
     @GET("findByBillType")
-    Call<CollectionApiResponse<Bill>> getBillListByBillType(@Query("deleted") boolean deleted, @Query("billType") BillType billType, @Query("page") String pageNumber);
+    Call<CollectionApiResponse<Bill>> getBillListByBillType(@Query("deleted") boolean deleted, @Query("billType") BillType billType, @Query("page") Integer pageNumber);
 
     @GET("findBySecondPartyIdAndBillType")
-    Call<CollectionApiResponse<Bill>> getBillListBySecondPartyIdAndBillType(@Query("deleted") boolean deleted, @Query("billType") BillType billType, @Query("SecondPartyId") Long SecondPartyId, @Query("page") String pageNumber);
+    Call<CollectionApiResponse<Bill>> getBillListBySecondPartyIdAndBillType(@Query("deleted") boolean deleted, @Query("billType") BillType billType, @Query("SecondPartyId") Long SecondPartyId, @Query("page") Integer pageNumber);
 
 }

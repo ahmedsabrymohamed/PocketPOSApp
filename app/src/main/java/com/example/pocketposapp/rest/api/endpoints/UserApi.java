@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 
 public interface UserApi {
     @GET
-    Call<CollectionApiResponse<User>> getUserList(@Query("page") String pageNumber);
+    Call<CollectionApiResponse<User>> getUserList(@Query("page") Integer pageNumber);
     @GET("{id}")
     Call<User> getUserById(@Path("id") Long id);
     @POST
@@ -22,7 +22,7 @@ public interface UserApi {
     @PUT("{id}")
     Call<User> updateUser(@Body User user);
     @GET("findIfExists")
-    Call<CollectionApiResponse<User>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") String pageNumber);
+    Call<CollectionApiResponse<User>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
     @GET("findByUserNameAndPassword")
-    Call<User> getByUserNameAndPassword(@Query("userName")String userName,@Query("password")String password,@Query("deleted")boolean deleted, @Query("page") String pageNumber);
+    Call<User> getByUserNameAndPassword(@Query("userName")String userName,@Query("password")String password,@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
 }

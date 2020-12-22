@@ -13,16 +13,16 @@ import retrofit2.http.Query;
 
 public interface ProductApi {
 
-    @GET
-    Call<CollectionApiResponse<Product>> getProductList(@Query("page") String pageNumber);
-    @GET("{id}")
+    @GET("product/")
+    Call<CollectionApiResponse<Product>> getProductList(@Query("page") Integer pageNumber);
+    @GET("product/{id}")
     Call<Product> getProductById(@Path("id") Long id);
-    @POST
+    @POST("product/")
     Call<Product> addProduct(@Body Product product);
-    @PUT("{id}")
+    @PUT("product/{id}")
     Call<Product> updateProduct(@Body Product product);
-    @GET("findIfExists")
-    Call<CollectionApiResponse<Product>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") String pageNumber);
+    @GET("product/findIfExists")
+    Call<CollectionApiResponse<Product>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
 
 
 
