@@ -6,7 +6,10 @@ public class Page {
     private int totalElements;
     private int totalPages;
     private int number;
-
+    public Page(){}
+    public Page(int pageNumber){
+        number = pageNumber;
+    }
     public int getSize() {
         return size;
     }
