@@ -2,6 +2,7 @@ package com.example.pocketposapp;
 
 import android.os.Bundle;
 
+import com.example.pocketposapp.util.PageController;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        PageController.initializeController(getResources().getStringArray(R.array.CollectionPage));
     }
 
 }

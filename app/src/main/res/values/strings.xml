@@ -7,4 +7,17 @@
     <string name="add_product">منتجات</string>
     <string name="add_client">عملاء</string>
     <string name="add_bill">فواتير</string>
+    <string-array name="CollectionPage">
+
+        <item>BillsByType</item>
+        <item>BillsByTypeAndSecondParty</item>
+        <item>BillsBySecondParty</item>
+        <item>AllBills</item>
+        <item>AllSecondParties</item>
+        <item>AllBulks</item>
+        <item>BulksByProduct</item>
+        <item>AllProducts</item>
+        <item>AllUsers</item>
+
+    </string-array>
 </resources>
