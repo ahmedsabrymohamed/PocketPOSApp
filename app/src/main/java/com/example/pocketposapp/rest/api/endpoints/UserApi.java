@@ -24,5 +24,5 @@ public interface UserApi {
     @GET("user/findIfExists")
     Call<CollectionApiResponse<User>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
     @GET("user/findByUserNameAndPassword")
-    Call<User> getByUserNameAndPassword(@Query("userName")String userName,@Query("password")String password,@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
+    Call<User> getByUserNameAndPassword(@Query("userName")String userName,@Query("password")String password,@Query("deleted")boolean deleted);
 }
