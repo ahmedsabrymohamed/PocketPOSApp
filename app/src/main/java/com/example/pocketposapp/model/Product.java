@@ -12,9 +12,9 @@ public class Product {
 	private Long id;
 
 	private String name;
-	private LocalDate expirationDate;
-	private LocalDateTime createDateTime;
-	private LocalDateTime updateDateTime;
+	private String expirationDate;
+	private String createDateTime;
+	private String updateDateTime;
 	private boolean deleted;
 	
 	
@@ -28,22 +28,22 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public LocalDate getExpirationDate() {
+	public String getExpirationDate() {
 		return expirationDate;
 	}
-	public void setExpirationDate(LocalDate expirationDate) {
+	public void setExpirationDate(String expirationDate) {
 		this.expirationDate = expirationDate;
 	}
-	public LocalDateTime getCreateDateTime() {
+	public String getCreateDateTime() {
 		return createDateTime;
 	}
-	public void setCreateDateTime(LocalDateTime createDateTime) {
+	public void setCreateDateTime(String createDateTime) {
 		this.createDateTime = createDateTime;
 	}
-	public LocalDateTime getUpdateDateTime() {
+	public String getUpdateDateTime() {
 		return updateDateTime;
 	}
-	public void setUpdateDateTime(LocalDateTime updateDateTime) {
+	public void setUpdateDateTime(String updateDateTime) {
 		this.updateDateTime = updateDateTime;
 	}
 	public Long getId() {
@@ -88,9 +88,17 @@ public class Product {
 		}
 		return true;
 	}
-	
-	
-	
-	
-	
+
+
+	@Override
+	public String toString() {
+		return "Product{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", expirationDate=" + expirationDate +
+				", createDateTime=" + createDateTime +
+				", updateDateTime=" + updateDateTime +
+				", deleted=" + deleted +
+				'}';
+	}
 }

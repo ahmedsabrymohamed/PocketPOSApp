@@ -94,8 +94,17 @@ public class Bulk {
 		}
 		return Double.doubleToLongBits(quantity) == Double.doubleToLongBits(other.getQuantity());
 	}
-	
-	
-	
-	
+
+
+	@Override
+	public String toString() {
+		return "Bulk{" +
+				"id=" + id +
+				", buyPrice=" + buyPrice +
+				", quantity=" + quantity +
+				", product='" + product + '\'' +
+				", createDateTime=" + createDateTime +
+				", updateDateTime=" + updateDateTime +
+				'}';
+	}
 }

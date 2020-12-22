@@ -82,7 +82,16 @@ public class BillSecondParty {
 		}
 		return true;
 	}
-	
-	
-	
+
+	@Override
+	public java.lang.String toString() {
+		return "BillSecondParty{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", phone='" + phone + '\'' +
+				", createDateTime=" + createDateTime +
+				", updateDateTime=" + updateDateTime +
+				", deleted=" + deleted +
+				'}';
+	}
 }

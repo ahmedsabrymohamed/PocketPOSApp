@@ -143,9 +143,19 @@ public  class Bill {
 		return true;
 	}
 
-	
-
-	
-	
-	
+	@Override
+	public java.lang.String toString() {
+		return "Bill{" +
+				"id=" + id +
+				", total=" + total +
+				", paid=" + paid +
+				", remainder=" + remainder +
+				", createDateTime=" + createDateTime +
+				", updateDateTime=" + updateDateTime +
+				", billType=" + billType +
+				", deleted=" + deleted +
+				", secondParty=" + secondParty +
+				", items=" + items +
+				'}';
+	}
 }

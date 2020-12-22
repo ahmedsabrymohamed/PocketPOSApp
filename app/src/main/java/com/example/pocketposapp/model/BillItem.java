@@ -38,4 +38,13 @@ public class BillItem {
 	public void setBulk(String bulk) {
 		this.bulk = bulk;
 	}
+
+	@Override
+	public String toString() {
+		return "BillItem{" +
+				"price=" + price +
+				", quantity=" + quantity +
+				", bulk='" + bulk + '\'' +
+				'}';
+	}
 }
