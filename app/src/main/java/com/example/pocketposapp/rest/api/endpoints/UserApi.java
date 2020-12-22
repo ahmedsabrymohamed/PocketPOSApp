@@ -13,16 +13,16 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface UserApi {
-    @GET
+    @GET("user/")
     Call<CollectionApiResponse<User>> getUserList(@Query("page") Integer pageNumber);
-    @GET("{id}")
+    @GET("user/{id}")
     Call<User> getUserById(@Path("id") Long id);
-    @POST
+    @POST("user/")
     Call<User> addUser(@Body User user);
-    @PUT("{id}")
+    @PUT("user/{id}")
     Call<User> updateUser(@Body User user);
-    @GET("findIfExists")
+    @GET("user/findIfExists")
     Call<CollectionApiResponse<User>> getProductListIfExists(@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
-    @GET("findByUserNameAndPassword")
+    @GET("user/findByUserNameAndPassword")
     Call<User> getByUserNameAndPassword(@Query("userName")String userName,@Query("password")String password,@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
 }

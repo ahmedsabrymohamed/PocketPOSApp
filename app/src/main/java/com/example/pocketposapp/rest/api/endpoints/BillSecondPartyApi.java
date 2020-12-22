@@ -14,14 +14,14 @@ import retrofit2.http.Query;
 
 public interface BillSecondPartyApi {
 
-    @GET
-    Call<CollectionApiResponse<BillSecondParty>> getSecondPartyList(@Query("page") String pageNumber);
-    @GET("{id}")
+    @GET("billSecondParty/")
+    Call<CollectionApiResponse<BillSecondParty>> getSecondPartyList(@Query("page") Integer pageNumber);
+    @GET("billSecondParty/{id}")
     Call<BillSecondParty> getSecondPartyById(@Path("id") Long id);
-    @POST
+    @POST("billSecondParty/")
     Call<BillSecondParty> addSecondParty(@Body BillSecondParty secondParty);
-    @PUT("{id}")
+    @PUT("billSecondParty/{id}")
     Call<BillSecondParty> updateSecondParty(@Body BillSecondParty secondParty);
-    @GET("findIfExists")
-    Call<CollectionApiResponse<BillSecondParty>> getSecondPartyListIfExists(@Query("deleted")boolean deleted, @Query("page") String pageNumber);
+    @GET("billSecondParty/findIfExists")
+    Call<CollectionApiResponse<BillSecondParty>> getSecondPartyListIfExists(@Query("deleted")boolean deleted, @Query("page") Integer pageNumber);
 }
