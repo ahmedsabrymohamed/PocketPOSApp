@@ -2,6 +2,8 @@ package com.example.pocketposapp.util;
 
 import androidx.annotation.NonNull;
 
+import com.example.pocketposapp.rest.api.responses.CollectionApiResponse;
+
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
@@ -39,9 +41,5 @@ public class ApiClient {
                doOnFailure.accept(call,t);
             }
         });
-
-
-
-
     }
 }
