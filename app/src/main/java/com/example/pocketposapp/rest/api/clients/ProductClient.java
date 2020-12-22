@@ -8,9 +8,6 @@ import com.example.pocketposapp.ui.products.ProductsViewModel;
 import com.example.pocketposapp.util.ApiRequestBuilder;
 import com.example.pocketposapp.util.PageController;
 
-import java.util.Collection;
-import java.util.function.BiConsumer;
-
 import retrofit2.Call;
 
 public class ProductClient {
